@@ -25,5 +25,7 @@ RUN chmod 640 /etc/apache2/webdav.password
 VOLUME /munki_repo
 EXPOSE 80
 
+CMD ["/usr/sbin/apache2ctl", "-D",  "FOREGROUND"]
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
