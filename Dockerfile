@@ -20,8 +20,12 @@ RUN a2enmod dav
 RUN a2enmod dav_fs
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 ADD 000-default.conf /etc/apache2/sites-enabled/
-RUN mkdir /webdav
-RUN chown www-data /webdav
+RUN mkdir /munki_repo
+RUN mkdir /munki_repo/pkgs
+RUN mkdir /munki_repo/pkgsinfo
+RUN mkdir /munki_repo/catalogs
+RUN mkdir /munki_repo/manifests
+RUN chown -R www-data /munki_repo
 RUN htpasswd -bc /etc/apache2/webdav.password mwaadmin password
 RUN chown root:www-data /etc/apache2/webdav.password
 RUN chmod 640 /etc/apache2/webdav.password
