@@ -6,7 +6,7 @@ nginx expect the munki repo content to be located at /munki_repo. use a volume c
 # Creating a Data Container.
 The following command will create a lightweight container with a folder at /munki_repo. 
 ```bash
-/usr/bin/docker run --name munki-data -v /munki_repo busybox'
+/usr/bin/docker run --name munki-data -v /munki_repo busybox
 ```
 My files are located on the host, so I mount that folder as well: 
 ```bash
