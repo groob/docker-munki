@@ -10,7 +10,7 @@ The following command will create a lightweight container with a folder at /munk
 ```
 My files are located on the host, so I mount that folder as well: 
 ```bash
-/usr/bin/docker run --name munki-data -v /mnt/docker_data/munki_repo:/munki_repo busybox'
+/usr/bin/docker run --name munki-data -v /mnt/docker_data/munki_repo:/munki_repo busybox
 ```
 
 For more info on data containers read [Tom Offermann](http://www.offermann.us/2013/12/tiny-docker-pieces-loosely-joined.html)'s blog post and the [official documentation](https://docs.docker.com/userguide/dockervolumes/). 
